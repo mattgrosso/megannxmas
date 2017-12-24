@@ -1,0 +1,108 @@
+@-webkit-keyframes snow {
+ 0% {background-position: 0px 0px;}
+ 100% {background-position: 500px 1000px, 400px 400px, 300px 600px;}
+}
+
+h1 {
+  font-family: 'Poiret One', cursive;
+  margin: 0 0 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #007300;
+}
+
+h2 {
+  font-family: 'Poiret One', cursive;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.3rem;
+}
+
+.message p:first-of-type {
+  text-align: center;
+}
+
+.message p:last-of-type {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.message p span {
+  color: #de080f;
+  display: block;
+  font-size: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: radial-gradient(transparent, black);
+  min-height: 100vh;
+  padding: 2vh 10px;
+}
+
+body {
+  background-color: #000;
+  background-image: url('img/500.png'), url('img/400.png'), url('img/300.png');
+  -webkit-animation: snow 20s linear infinite;
+}
+
+section {
+  border: solid rgba(255, 255, 255, 0.3) 2px;
+  background-color: rgba(0, 0, 0, 0.74);
+  color: white;
+  margin-bottom: 25px;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.santa-hat {
+  display: none;
+  position: absolute;
+  top: -14px;
+  left: -53px;
+}
+
+.call-to-action {
+  text-align: center;
+}
+
+.call-to-action a {
+  background-color: #de080f;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 5px 20px;
+  border-radius: 3px;
+  transition: background-color .25s ease-out;
+}
+
+.call-to-action a:hover {
+  background-color: #a50000;
+}
+
+@media only screen and (min-width: 768px)  {
+  .overlay {
+    padding-top: 8vh;
+  }
+
+  section {
+    box-sizing: border-box;
+    padding: 30px 90px;
+    margin: 0 auto 25px;
+    max-width: 750px;
+  }
+}
+
+@media only screen and (min-width: 850px)  {
+  .santa-hat {
+    display: block;
+  }
+}
